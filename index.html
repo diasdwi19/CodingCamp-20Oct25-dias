@@ -1,15 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latihan Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Raleway -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+  </style>
 </head>
+<body class="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-50 text-gray-800">
 
-<body>
-    <h1>Hello, World!</h1>
-    <p>This is a sample HTML document.</p>
+<!-- Navbar -->
+<nav class="flex justify-between items-center px-4 md:px-20 py-4 border-b border-gray-200 bg-white/70 backdrop-blur-md fixed top-0 left-0 right-0 z-50">
+  <div class="flex items-center space-x-2">
+    <img src="images/logo.png" alt="Logo Neo Solution" class="w-7 h-7 md:w-8 md:h-8" />
+    <span class="text-lg md:text-xl font-bold text-gray-800">Neo Solution</span>
+  </div>
+
+  <div class="hidden md:flex space-x-8">
+    <a href="#home" class="hover:text-blue-600">Home</a>
+    <a href="#our-profile" class="hover:text-blue-600">Our Profile</a>
+    <a href="#portofolio" class="hover:text-blue-600">Portofolio</a>
+    <a href="#message" class="hover:text-blue-600">Message Us</a>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div class="md:hidden">
+    <button id="menuBtn" class="focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Menu Dropdown Mobile -->
+<div id="mobileMenu" class="hidden flex flex-col bg-white shadow-md absolute top-16 right-0 left-0 py-4 space-y-2 text-center md:hidden">
+  <a href="#home" class="hover:text-blue-600">Home</a>
+  <a href="#our-profile" class="hover:text-blue-600">Our Profile</a>
+  <a href="#portofolio" class="hover:text-blue-600">Portofolio</a>
+  <a href="#message" class="hover:text-blue-600">Message Us</a>
+</div>
+
+<!-- Hero Section -->
+<section class="pt-28 pb-32 px-4 md:px-20 flex flex-col-reverse md:flex-row items-center justify-between bg-gradient-to-b from-blue-100 via-white to-blue-50">
+  <div class="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+    <h1 class="text-3xl md:text-5xl font-bold leading-tight text-gray-800">
+      Solusi <span class="text-indigo-600">Teknologi</span> Masa Kini<br />
+      untuk <span class="text-purple-600">Bisnis</span> Masa Depan
+    </h1>
+    <p class="text-gray-600 mt-4 text-base md:text-lg max-w-xl mx-auto md:mx-0">
+      Kami hadir untuk mempermudah perjalanan digital bisnismu dengan solusi yang cerdas dan inovatif.
+    </p>
+    <div class="mt-10">
+      <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-3 rounded-lg shadow-md transition">
+        Daftar Sekarang
+      </button>
+    </div>
+  </div>
+  <div class="md:w-1/2 flex justify-center">
+    <img src="images/ilustrasi.png" alt="Ilustrasi Neo Solution" class="w-72 md:w-[520px] lg:w-[600px]" />
+  </div>
+</section>
+
+<!-- Our Profile -->
+<section id="our-profile" class="px-4 md:px-20 pb-20 pt-32">
+  <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Our Profile</h2>
+  <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+    <div class="md:w-1/2 flex justify-center">
+      <img src="images/gedung.jpeg" alt="Gedung Neo Solution" class="rounded-2xl shadow-lg w-full md:w-[70%] object-cover" />
+    </div>
+    <div class="md:w-1/2 text-center md:text-left space-y-4 px-2">
+      <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+        Neo Solution adalah perusahaan teknologi yang berfokus pada pengembangan solusi digital modern untuk membantu bisnis tumbuh dan beradaptasi di era transformasi digital.
+      </p>
+      <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+        Kami menyediakan layanan mulai dari pengembangan perangkat lunak, desain sistem, hingga integrasi teknologi untuk memastikan efisiensi dan produktivitas yang maksimal bagi para klien kami.
+      </p>
+      <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+        Dengan tim profesional dan berpengalaman, kami berkomitmen menghadirkan inovasi yang mampu mendorong kemajuan bisnis di dunia digital.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Our Headquarter -->
+<section id="headquarter" class="py-20 mt-40 md:mt-48 px-4 md:px-20">
+  <h2 class="text-center text-2xl md:text-3xl font-bold mb-10 text-gray-800">Our Headquarter</h2>
+  <div class="flex justify-center flex-wrap gap-10">
+    <div class="text-center">
+      <img src="images/jakarta.jpg" alt="Jakarta" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-2 shadow-md border-4 border-white" />
+      <p class="font-medium text-gray-700">Jakarta</p>
+    </div>
+    <div class="text-center">
+      <img src="images/bandung.jpg" alt="Bandung" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-2 shadow-md border-4 border-white" />
+      <p class="font-medium text-gray-700">Bandung</p>
+    </div>
+    <div class="text-center">
+      <img src="images/surabaya.jpg" alt="Surabaya" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-2 shadow-md border-4 border-white" />
+      <p class="font-medium text-gray-700">Surabaya</p>
+    </div>
+  </div>
+</section>
+
+<!-- Message Us -->
+<section id="message" class="py-20 bg-white/80 backdrop-blur-sm px-4">
+  <h2 class="text-center text-3xl font-semibold mb-10 text-gray-800">Message Us</h2>
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+
+    <!-- Form -->
+    <form id="messageForm" class="flex-1 bg-white rounded-2xl shadow-md p-6">
+      <label for="name" class="font-semibold">Nama:</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required class="border border-gray-300 rounded-md p-2 w-full mb-4 placeholder-gray-400" />
+
+      <label for="dob" class="font-semibold">Tanggal Lahir:</label>
+      <input type="date" id="dob" name="dob" required class="border border-gray-300 rounded-md p-2 w-full mb-4" />
+
+      <label class="font-semibold">Jenis Kelamin:</label>
+      <div class="flex gap-6 mb-4">
+        <label><input type="radio" name="gender" value="Laki-Laki" required /> Laki-Laki</label>
+        <label><input type="radio" name="gender" value="Perempuan" required /> Perempuan</label>
+      </div>
+
+      <label for="messageText" class="font-semibold">Pesan:</label>
+      <textarea id="messageText" name="message" placeholder="Ketik pesan Anda di sini..." required minlength="10" class="border border-gray-300 rounded-md p-2 w-full mb-4 placeholder-gray-400"></textarea>
+
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-md w-full md:w-auto">
+        Submit
+      </button>
+    </form>
+
+    <!-- Output -->
+    <div class="flex-1 bg-white rounded-2xl shadow-md p-6">
+      <p><strong>Current Time:</strong> <span id="currentTime"></span></p>
+      <p><strong>Nama:</strong> <span id="outputName"></span></p>
+      <p><strong>Tanggal Lahir:</strong> <span id="outputDob"></span></p>
+      <p><strong>Jenis Kelamin:</strong> <span id="outputGender"></span></p>
+      <p><strong>Pesan:</strong> <span id="outputMessage"></span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-6 text-gray-600">
+  Created By <span class="font-semibold text-blue-600">Dias</span>
+</footer>
+
+<!-- Script -->
+<script>
+  // Waktu realtime
+  function updateTime() {
+    const now = new Date();
+    const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+    const timeString = now.toLocaleTimeString('id-ID', { hour12: false });
+    document.getElementById('currentTime').textContent =
+      `${now.toLocaleDateString('id-ID', options)} pukul ${timeString}`;
+  }
+  setInterval(updateTime, 1000);
+  updateTime();
+
+  // Form handler
+  document.getElementById("messageForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("outputName").textContent = document.getElementById("name").value;
+    document.getElementById("outputDob").textContent = document.getElementById("dob").value;
+    document.getElementById("outputGender").textContent = document.querySelector('input[name="gender"]:checked')?.value || "";
+    document.getElementById("outputMessage").textContent = document.getElementById("messageText").value;
+  });
+
+  // Toggle menu mobile
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
 </body>
-
-
 </html>
